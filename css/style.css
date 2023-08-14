@@ -1,0 +1,272 @@
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --normal-text: Roboto, sans-serif;
+    --title-text: 'M PLUS 1p', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: var(--normal-text);
+}
+
+p {
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-text);
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/*
+    Шапка
+*/
+
+.header {
+    height: 95vh;
+    background: url('../img/bg_header.jpg') center center / cover no-repeat;
+    padding: 50px;
+    color: #fff;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.2em;
+    text-transform: lowercase;
+    letter-spacing: 0.1em;
+}
+
+.header nav .logo {
+    height: 50px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #fff;
+
+    transition: all .3s ease;
+}
+
+.header nav a:hover {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #fff;
+}
+
+.header nav ul {
+    display: flex;
+}
+
+.header nav li {
+    margin-right: 70px;
+    list-style: none;
+}
+
+.header nav li:last-child {
+    margin-right: 0;
+}
+
+.header .telephone {
+    font-weight: bold;
+}
+
+.header .telephone img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.title {
+    margin-top: 140px;
+}
+
+.title h2 {
+    font-size: 2.5em;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+}
+
+.title h1 {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.button {
+    color: #000;
+    font-family: var(--normal-text);
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    background-color: #D68335;
+    box-shadow: 0 0 10px 3px inset #F8A847;
+    display: inline-block;
+    padding: 15px 40px;
+
+    transition: all .3s;
+}
+
+.button:hover,
+.button:active {
+    background-color: #F8A847;
+    color: rgba(0, 0, 0, .7);
+}
+
+.header .button {
+    margin-top: 40px;
+}
+
+/*
+    Наши
+    УСЛУГИ
+*/
+
+.services {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 1100px;
+    margin: -70px auto 0;
+    padding: 60px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+.services ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services .top_text,
+.services .bottom_text {
+    display: block;
+    font-family: var(--title-text);
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+.services .bottom_text {
+    text-transform: uppercase;
+}
+
+.services .top_elem {
+    background-color: #0f0;
+    display: block;
+    margin: 0 auto 10px;
+    width: 48px;
+}
+
+.services .bottom_elem {
+    color: #000;
+    font-size: 1.2em;
+}
+
+.about {
+    background-color: #F4E7F0;
+    padding: 160px 0 60px;
+}
+
+.about h2 {
+    margin-bottom: 30px;
+}
+
+.about p {
+    margin-bottom: 40px;
+}
+
+.about .bottom_text {
+    display: flex;
+}
+
+.about .bottom_text h3 {
+    font-weight: normal;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about .bottom_text img {
+    width: 500px;
+    padding-left: 50px;
+}
+
+/*
+    Кафе
+*/
+
+.cafe {
+    background-color: #F4E7F0;
+    padding-bottom: 60px;
+}
+
+.cafe h2 {
+    border-bottom: 5px solid #000;
+    padding: 0 10px 10px;
+    display: inline-block;
+}
+
+.cafe .grid {
+    background-color: #0f0;
+    padding: 50px;
+}
+
+/*
+    Номера
+*/
+
+.rooms {
+    background-color: #F4E7F0;
+    padding-bottom: 60px;
+}
+
+.rooms h2 {
+    border-bottom: 5px solid #000;
+    padding: 0 10px 10px;
+    display: inline-block;
+    background-color: #0f0;
+}
+
+/*
+    Контакты
+*/
+
+.contacts {
+    background-color: #0A1614;
+    padding-bottom: 60px;
+}
+
+.contacts h2 {
+    border-bottom: 5px solid #000;
+    padding: 0 10px 10px;
+    display: inline-block;
+    background-color: #0f0;
+}
