@@ -68,6 +68,17 @@
     transform: translateY(0%);
 }
 
+.animation.fadeInUpSlow {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.animation.fadeInUpSlow.show {
+    opacity: 1;
+    transition: all 1.2s .1s;
+    transform: translateY(0%);
+}
+
 /* Плавное появление сверху */
 .animation.fadeInDown {
     opacity: 0;
@@ -90,4 +101,17 @@
     opacity: 1;
     transition: all .8s;
     transform: scale(1);
+}
+
+@keyframes flip {
+    0% {
+        transform: translateX(-40px);
+        opacity: 0;
+        visibility: hidden;
+    }
+    15% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
 }
