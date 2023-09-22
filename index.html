@@ -13,6 +13,9 @@
         <!--[if lt IE 9]>
             <script src="js/html5shiv.js"></script>
         <![endif]-->
+
+        <!-- livereload -->
+        <script src="http://localhost:35729/livereload.js?snipver=1"></script>
     </head>
     <body id="body">
 
@@ -31,14 +34,17 @@
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                     <a class="telephone" href="tel:+79141803132">
-                        <img src="img/tel.png" alt="Иконка телефона">
+                        <img src="img/icons/tel.png" alt="Иконка телефона">
                         +7 (914) 180-31-32
                     </a>
                 </nav>
                 <div class="title">
                     <h2 class="animation fadeInLeft">Мотель-экспресс Усадьба</h2>
                     <h1 class="animation fadeInLeftSlow">Отдых в дороге</h1>
-                    <a class="button" href="">Забронировать</a>
+                    <button id="open-modal" class="button" type="button">Забронировать</button>
+                    <div id="modal" class="modal">
+                        <a href="tel:+79141803132">+7 (914) 180-31-32</a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -55,19 +61,19 @@
                     <span class="bottom_text">услуги</span>
                 </li>
                 <li class="item_2">
-                    <img class="top_elem" src="img/tel.png" alt="Иконка парковки">
+                    <img class="top_elem" src="img/icons/parking.png" alt="Иконка парковки">
                     <span class="bottom_elem">Большая парковка</span>
                 </li>
                 <li class="item_3">
-                    <img class="top_elem" src="img/tel.png" alt="Иконка краника">
+                    <img class="top_elem" src="img/icons/water.png" alt="Иконка краника">
                     <span class="bottom_elem">Горячая вода</span>
                 </li>
                 <li class="item_4">
-                    <img class="top_elem" src="img/tel.png" alt="Иконка кафе">
+                    <img class="top_elem" src="img/icons/cafeteria.png" alt="Иконка кафе">
                     <span class="bottom_elem">Кафе</span>
                 </li>
                 <li class="item_5">
-                    <img class="top_elem" src="img/tel.png" alt="Иконка хз пока чего">
+                    <img class="top_elem" src="img/icons/amur.png" alt="Иконка хз пока чего">
                     <span class="bottom_elem">2км до Амура</span>
                 </li>
             </ul>
@@ -82,23 +88,25 @@
                 <div class="top_text animation fadeInLeft">
                     <h2>О нас</h2>
                     <p>
-                        Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ее выйти своего пустился над маленькая дал, вершину но большого. Журчит, рот. Жаренные, свое заманивший? То, даль ее. Подпоясал, вопроса.
+                        Наша история началась в 2007 году, когда мы открылись и стали промежуточным пунктом на маршруте между городами Комсомольск-на-Амуре и Хабаровск. Мы постарались создать уникальное место, где каждый гость может насладиться комфортом и восхитительными блюдами. Мы гордимся тем, что за все эти годы мы смогли завоевать доверие и признание наших посетителей.
                     </p>
                 </div>
                 <div class="bottom_text">
                     <div class="left animation fadeInLeftSlow">
                         <p>
-                            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Коварный свой подпоясал страна на берегу там своего, жизни семантика что родного даль живет. Текстами вопрос сих если свой рукопись пор. Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Коварный свой подпоясал страна на берегу там своего, жизни семантика что родного даль живет. Текстами вопрос сих если свой рукопись пор.
+                            При посещении нашего кафе вы будете приятно удивлены широким выбором блюд нашего меню. Наша команда приготовит для вас вкусные блюда, которые подойдут для каждого вкуса. Будь то ароматный кофе с десертом для перекуса или полноценный обед после долгой дороги - мы сделаем все возможное, чтобы угодить вашему аппетиту.
                         </p>
-                        <h3>Чем заняться?</h3>
                         <p>
-                            Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Текстами, решила семантика! Осталось сбить взгляд обеспечивает великий. Что то не переписывается знаках свой скатился агентство деревни эта она единственное?
+                            Мы также предлагаем вам комфортабельные номера в нашей гостинице, где вы сможете отдохнуть и восстановить силы перед продолжением путешествия. Наши номера оснащены всем необходимым для комфортного пребывания.
                         </p>
                     </div>
                     <div class="right">
                         <img class="animation fadeInRightSlow" src="img/about.jpg" alt="Фото отеля">
                     </div>
                 </div>
+                <p class="last_text animation fadeInUpSlow">
+                    Мы гордимся тем, что стали надежным пунктом для отдыха и перекуса на дороге между Комсомольском-на-Амуре и Хабаровском. Ждем вас в нашем кафе-гостинице :)
+                </p>
             </div>
         </main>
 
@@ -108,9 +116,44 @@
 
          <section id="cafe" class="cafe">
             <div class="wrapper">
-                <h2 class="animation fadeInLeft">Наше кафе</h2>
-                <div class="grid">
-                    <p>test</p>
+                <h2 class="animation fadeInLeft">Наше кафе предлагает</h2>
+
+                <div class="dishes">
+                    <!-- Блюдо 1 -->
+                    <div class="dish animation zoomIn">
+                        <img src="img/borsch.jpg" alt="Борщ">
+                        <p class="desc">Борщ</p>
+                    </div>
+
+                    <!-- Блюдо 2 -->
+                    <div class="dish animation zoomIn">
+                        <img src="img/chicken.jpg" alt="Пюре с курицей">
+                        <p class="desc">Пюре с курицей</p>
+                    </div>
+
+                    <!-- Блюдо 3 -->
+                    <div class="dish animation zoomIn">
+                        <img src="img/caesar.jpg" alt="Салат Цезарь">
+                        <p class="desc">Салат Цезарь</p>
+                    </div>
+
+                    <!-- Блюдо 4 -->
+                    <div class="dish animation zoomIn">
+                        <img src="img/pies.jpg" alt="Пирожки">
+                        <p class="desc">Пирожки</p>
+                    </div>
+
+                    <!-- Блюдо 5 -->
+                    <div class="dish animation zoomIn">
+                        <img src="img/meatballs.jpg" alt="Тефтели">
+                        <p class="desc">Тефтели</p>
+                    </div>
+
+                    <!-- Блюдо 5 -->
+                    <div class="dish animation zoomIn">
+                        <img src="img/other.jpg" alt="И другое">
+                        <p class="desc">И многое другое</p>
+                    </div>
                 </div>
             </div>
          </section>
@@ -121,7 +164,27 @@
 
          <section id="rooms" class="rooms">
             <div class="wrapper">
-                <h2 class="animation fadeInLeft">Номера</h2>
+                <h2 class="animation fadeInLeft">Номера для проживания</h2>
+                <div class="gallery animation fadeInDown">
+                    <a data-fslightbox="gallery" href="img/rooms/2.jpeg">
+                        <img src="img/rooms/2_min.webp" alt="Image 2">
+                    </a>
+                    <a data-fslightbox="gallery" href="img/rooms/3.jpeg">
+                        <img src="img/rooms/3_min.webp" alt="Image 3">
+                    </a>
+                    <a data-fslightbox="gallery" href="img/rooms/4.jpeg">
+                        <img src="img/rooms/4_min.webp" alt="Image 4">
+                    </a>
+                    <a data-fslightbox="gallery" href="img/rooms/5.jpeg">
+                        <img src="img/rooms/5_min.webp" alt="Image 5">
+                    </a>
+                    <a data-fslightbox="gallery" href="img/rooms/6.jpeg">
+                        <img src="img/rooms/6_min.webp" alt="Image 6">
+                    </a>
+                    <a data-fslightbox="gallery" href="img/rooms/7.jpeg">
+                        <img src="img/rooms/7_min.webp" alt="Image 7">
+                    </a>
+                </div>
             </div>
          </section>
 
@@ -155,7 +218,7 @@
          <footer id="footer" class="footer">
             <div class="wrapper">
                 <div class="footer_text">
-                    <span>Мотель-экспресс Усадьба    © 2023<br>Все права защищены.</span>
+                    <span>Мотель-экспресс Усадьба © 2023<br>Все права защищены.</span>
                     <div class="autor_wrapper">
                         <span>Разработчик</span>
                         <div class="autor">
@@ -171,6 +234,9 @@
             Прочие скрипты
         -->
 
+        <a class="arrow_up" href="#header" title="Наверх"></a>
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="js/fslightbox.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
